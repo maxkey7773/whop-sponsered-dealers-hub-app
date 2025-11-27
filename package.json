@@ -1,0 +1,41 @@
+{
+	"name": "whop-nextjs-app-template",
+	"version": "0.2.0",
+	"private": true,
+	"scripts": {
+		"dev": "whop-proxy --command 'next dev --turbopack'",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome lint"
+	},
+	"dependencies": {
+		"@auth/prisma-adapter": "^2.11.1",
+		"@prisma/client": "^5.22.0",
+		"@types/multer": "^2.0.0",
+		"@vercel/functions": "^3.1.4",
+		"@whop/react": "0.3.0",
+		"@whop/sdk": "0.0.3",
+		"multer": "^2.0.2",
+		"next": "16.0.0",
+		"next-auth": "^4.24.7",
+		"node-telegram-bot-api": "^0.63.0",
+		"prisma": "^5.22.0",
+		"react": "19.2.0",
+		"react-dom": "19.2.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.6",
+		"@tailwindcss/postcss": "^4.1.14",
+		"@types/node": "^20.19.21",
+		"@types/node-telegram-bot-api": "^0.64.12",
+		"@types/react": "19.2.2",
+		"@types/react-dom": "19.2.2",
+		"@whop-apps/dev-proxy": "0.0.1-canary.117",
+		"dotenv-cli": "^10.0.0",
+		"tailwindcss": "^4.1.14",
+		"typescript": "^5.9.3"
+	},
+	"engines": {
+		"node": ">=18.17.0"
+	}
+}

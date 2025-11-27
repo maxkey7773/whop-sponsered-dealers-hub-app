@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Available Deals - InfluencerHub</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="min-h-screen bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 mb-4">Available Deals</h1>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+<div class="flex flex-wrap gap-4">
+<input type="text" placeholder="Search deals..." class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+<select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+<option value="">All Niches</option>
+<option value="fashion">Fashion</option>
+<option value="tech">Technology</option>
+<option value="food">Food</option>
+<option value="travel">Travel</option>
+</select>
+<select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+<option value="">All Platforms</option>
+<option value="instagram">Instagram</option>
+<option value="tiktok">TikTok</option>
+<option value="youtube">YouTube</option>
+<option value="twitter">Twitter</option>
+</select>
+</div>
+<a href="/brand/new-deal" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">Post New Deal</a>
+</div>
+</div>
+<!-- Deals Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Deal Card Example -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-lg font-semibold text-gray-900 mb-1">Sample Deal Title</h3>
+<p class="text-sm text-gray-600">by Brand Name</p>
+</div>
+<span class="text-2xl font-bold text-green-600">$500</span>
+</div>
+<p class="text-gray-700 mb-4 line-clamp-3">This is a sample deal description. It includes details about the campaign requirements and expectations.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Fashion</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Instagram</span>
+<span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Global</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-500">5 applications</span>
+<a href="/deals/1" class="px-3 py-1 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50">View Details</a>
+</div>
+</div>
+<!-- Add more deal cards as needed -->
+</div>
+<!-- Empty State -->
+<div class="text-center py-12">
+<p class="text-gray-500 text-lg">No deals available at the moment.</p>
+<p class="text-gray-400 mt-2">Check back later or post your own deal!</p>
+</div>
+</div>
+</div>
+</body>
+</html>

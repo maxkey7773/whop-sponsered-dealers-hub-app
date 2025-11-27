@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Dashboard - InfluencerHub</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="min-h-screen bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 mb-4">Brand Dashboard</h1>
+<div class="flex justify-between items-center">
+<p class="text-gray-600">Manage your campaigns and applications</p>
+<a href="/brand/new-deal" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">Post New Deal</a>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-blue-100 rounded-lg">
+<span class="text-blue-600 text-xl">📋</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Total Deals</p>
+<p class="text-2xl font-bold text-gray-900">5</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-green-100 rounded-lg">
+<span class="text-green-600 text-xl">✅</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Active Deals</p>
+<p class="text-2xl font-bold text-gray-900">3</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-purple-100 rounded-lg">
+<span class="text-purple-600 text-xl">🏆</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Completed</p>
+<p class="text-2xl font-bold text-gray-900">2</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-orange-100 rounded-lg">
+<span class="text-orange-600 text-xl">👥</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Applications</p>
+<p class="text-2xl font-bold text-gray-900">12</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Deals List -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200">
+<div class="px-6 py-4 border-b border-gray-200">
+<h2 class="text-lg font-semibold text-gray-900">Your Deals</h2>
+</div>
+<div class="divide-y divide-gray-200">
+<!-- Deal Item -->
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-lg font-medium text-gray-900 mb-1">Fashion Campaign</h3>
+<p class="text-gray-600 text-sm mb-2">Looking for fashion influencers to promote our new collection</p>
+<div class="flex items-center space-x-4 text-sm text-gray-500">
+<span>$500</span>
+<span>Fashion</span>
+<span>Instagram</span>
+<span class="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800">OPEN</span>
+</div>
+</div>
+<div class="flex space-x-2">
+<a href="/brand/deals/1" class="px-3 py-1 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50">View Applications (3)</a>
+</div>
+</div>
+<!-- Recent Applications -->
+<div class="mt-4">
+<h4 class="text-sm font-medium text-gray-900 mb-2">Recent Applications:</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+<div>
+<p class="text-sm font-medium text-gray-900">John Doe</p>
+<p class="text-xs text-gray-600">Fashion influencer with 50k followers</p>
+</div>
+<span class="px-2 py-1 rounded-full text-xs bg-yellow-100 text-yellow-800">APPLIED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Add more deal items as needed -->
+</div>
+<!-- Empty State -->
+<div class="p-12 text-center">
+<p class="text-gray-500 text-lg mb-4">No deals posted yet</p>
+<a href="/brand/new-deal" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">Create Your First Deal</a>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

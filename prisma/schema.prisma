@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String?
+  role        String   @default("INFLUENCER") // BRAND, INFLUENCER, ADMIN
+  bio         String?
+  niche       String?
+  platforms   String? // JSON string of platforms
+  stats       String? // JSON string of stats
+  portfolio   String? // JSON string of links
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  deals       Deal[]
+  applications Application[]
+  payments    Payment[]
+  sentMessages    Message[] @relation("MessageSender")
+  receivedMessages Message[] @relation("MessageReceiver")
+  notifications Notification[]
+
+  @@map("users")
+}
+
+model Deal {
+  id          String     @id @default(cuid())
+  title       String
+  description String
+  niche       String
+  platform    String
+  budget      Float
+  region      String
+  status      String     @default("OPEN") // OPEN, CLOSED, COMPLETED
+  brandId     String
+  brand       User       @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  // Relations
+  applications Application[]
+  payments     Payment[]
+
+  @@map("deals")
+}
+
+model Application {
+  id          String   @id @default(cuid())
+  status      String   @default("APPLIED") // APPLIED, APPROVED, IN_PROGRESS, COMPLETED, REJECTED
+  influencerId String
+  dealId      String
+  influencer  User     @relation(fields: [influencerId], references: [id], onDelete: Cascade)
+  deal        Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  proof       String? // File path or URL
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([influencerId, dealId])
+  @@map("applications")
+}
+
+model Payment {
+  id          String   @id @default(cuid())
+  amount      Float
+  status      String   @default("PENDING") // PENDING, COMPLETED, FAILED
+  type        String // "DEPOSIT" or "WITHDRAWAL"
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dealId      String?
+  deal        Deal?    @relation(fields: [dealId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("payments")
+}
+
+model Message {
+  id          String   @id @default(cuid())
+  content     String
+  senderId    String
+  receiverId  String
+  sender      User     @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver    User     @relation("MessageReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+  attachments String? // JSON string of file paths
+  createdAt   DateTime @default(now())
+
+  @@map("messages")
+}
+
+model Notification {
+  id          String   @id @default(cuid())
+  title       String
+  message     String
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  read        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@map("notifications")
+}

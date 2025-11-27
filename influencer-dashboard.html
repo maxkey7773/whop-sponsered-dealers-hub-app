@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Influencer Dashboard - InfluencerHub</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="min-h-screen bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 mb-4">Influencer Dashboard</h1>
+<div class="flex justify-between items-center">
+<p class="text-gray-600">Track your applications and discover new opportunities</p>
+<a href="/influencer/profile" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Edit Profile</a>
+</div>
+</div>
+<!-- Profile Completion Warning -->
+<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
+<div class="flex">
+<div class="flex-shrink-0">
+<span class="text-yellow-400 text-xl">⚠️</span>
+</div>
+<div class="ml-3">
+<h3 class="text-sm font-medium text-yellow-800">Complete Your Profile</h3>
+<p class="mt-2 text-sm text-yellow-700">
+Add your bio, niche, and social media links to increase your chances of getting approved for deals.
+</p>
+<div class="mt-4">
+<a href="/influencer/profile" class="px-3 py-1 text-sm font-medium text-yellow-800 bg-yellow-100 border border-transparent rounded hover:bg-yellow-200">Complete Profile</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-blue-100 rounded-lg">
+<span class="text-blue-600 text-xl">📝</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Total Applications</p>
+<p class="text-2xl font-bold text-gray-900">8</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-yellow-100 rounded-lg">
+<span class="text-yellow-600 text-xl">⏳</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Pending</p>
+<p class="text-2xl font-bold text-gray-900">5</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-green-100 rounded-lg">
+<span class="text-green-600 text-xl">✅</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Approved</p>
+<p class="text-2xl font-bold text-gray-900">2</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class="flex items-center">
+<div class="p-2 bg-purple-100 rounded-lg">
+<span class="text-purple-600 text-xl">🏆</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-gray-600">Completed</p>
+<p class="text-2xl font-bold text-gray-900">1</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- My Applications -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200">
+<div class="px-6 py-4 border-b border-gray-200">
+<h2 class="text-lg font-semibold text-gray-900">My Applications</h2>
+</div>
+<div class="divide-y divide-gray-200 max-h-96 overflow-y-auto">
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-sm font-medium text-gray-900">Fashion Campaign</h3>
+<span class="px-2 py-1 rounded-full text-xs bg-yellow-100 text-yellow-800">APPLIED</span>
+</div>
+<p class="text-xs text-gray-600 mb-2">Brand Name • $500</p>
+<p class="text-xs text-gray-500">Fashion • Instagram</p>
+</div>
+<!-- Add more applications -->
+</div>
+<div class="p-8 text-center">
+<p class="text-gray-500 text-sm mb-4">No applications yet</p>
+<a href="/deals" class="px-3 py-1 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50">Browse Deals</a>
+</div>
+</div>
+<!-- Recommended Deals -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200">
+<div class="px-6 py-4 border-b border-gray-200">
+<h2 class="text-lg font-semibold text-gray-900">Recommended Deals</h2>
+</div>
+<div class="p-4 space-y-4">
+<div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-sm font-medium text-gray-900">Tech Product Review</h3>
+<span class="text-sm font-bold text-green-600">$300</span>
+</div>
+<p class="text-xs text-gray-600 mb-2">TechBrand Inc.</p>
+<div class="flex items-center justify-between">
+<div class="flex space-x-2">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Technology</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">YouTube</span>
+</div>
+<a href="/deals/1" class="px-2 py-1 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50">Apply</a>
+</div>
+</div>
+<!-- Add more deals -->
+</div>
+<div class="p-8 text-center">
+<p class="text-gray-500 text-sm">No new deals available</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

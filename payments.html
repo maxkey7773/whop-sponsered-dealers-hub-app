@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payments - InfluencerHub</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="min-h-screen bg-gray-50">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 mb-4">Payments</h1>
+<p class="text-gray-600">Manage your deposits, withdrawals, and payment history</p>
+</div>
+<!-- Balance Card -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold text-gray-900 mb-2">Current Balance</h2>
+<p class="text-3xl font-bold text-green-600">$1,250.00</p>
+<p class="text-sm text-yellow-600 mt-1">2 pending transaction(s)</p>
+</div>
+<div class="flex space-x-4">
+<button class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">Deposit Funds</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Withdraw</button>
+</div>
+</div>
+</div>
+<!-- Fee Information -->
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+<h3 class="text-lg font-semibold text-blue-900 mb-4">Fee Structure</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h4 class="font-medium text-blue-800 mb-2">Commission Model</h4>
+<ul class="text-sm text-blue-700 space-y-1">
+<li>• 5-15% fee per completed deal</li>
+<li>• Paid by brand when deal is completed</li>
+<li>• Transparent pricing</li>
+</ul>
+</div>
+<div>
+<h4 class="font-medium text-blue-800 mb-2">Subscription Model</h4>
+<ul class="text-sm text-blue-700 space-y-1">
+<li>• Monthly fee for premium access</li>
+<li>• Exclusive deals and features</li>
+<li>• Priority support</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Payment Actions -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-4">Deposit Funds</h3>
+<p class="text-gray-600 mb-4">Add funds to your account to pay for influencer deals. Funds are held in escrow until work is completed.</p>
+<button class="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">Make Deposit</button>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-4">Withdraw Earnings</h3>
+<p class="text-gray-600 mb-4">Withdraw your earnings from completed deals. Processing time: 3-5 business days.</p>
+<button class="w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">Request Withdrawal</button>
+</div>
+</div>
+<!-- Payment History -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200">
+<div class="px-6 py-4 border-b border-gray-200">
+<h2 class="text-lg font-semibold text-gray-900">Payment History</h2>
+</div>
+<div class="divide-y divide-gray-200">
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-sm font-medium text-gray-900">Deposit - Fashion Campaign</p>
+<p class="text-xs text-gray-600">Fashion Brand Inc.</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-medium text-green-600">+$500.00</p>
+<p class="text-xs px-2 py-1 rounded-full inline-block bg-green-100 text-green-800">COMPLETED</p>
+</div>
+</div>
+<p class="text-xs text-gray-500">Nov 1, 2023</p>
+</div>
+<!-- Add more payment items -->
+<div class="p-12 text-center">
+<p class="text-gray-500 text-lg mb-2">No payment history</p>
+<p class="text-gray-400 text-sm">Your transactions will appear here</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
